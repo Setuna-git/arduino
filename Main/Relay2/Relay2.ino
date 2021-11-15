@@ -234,7 +234,7 @@ void setup()
                                             // message 割り込み時に実行される関数
                                             // FALLING ピンの状態が HIGH → LOW になった時に割り込み
     Serial.begin(9600);                     //siralの速度
-    Serial.print("Lora1\n---------------------------\n");
+    Serial.print("Lora2\n---------------------------\n");
 
     setRestartLora();
     setLoraInit();
