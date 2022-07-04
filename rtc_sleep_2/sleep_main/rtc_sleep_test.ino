@@ -8,12 +8,14 @@
 
 void interrput()
 {
+    detachInterrupt(1);
     Serial.println("interrupt_message");
     Serial.println("light up LED 5s");
 }
 
 void interrputpin(){
-    Serial.println("Hello Arduino");
+    noInterrupts();
+    Serial.println("Hello Arduino--------------");
 }
 
 void setup()
@@ -64,7 +66,6 @@ void setup()
 
 void loop()
 {
-    Serial.println("sleep Arduino");
     sleep_enable();     //スリープを有効化
     sleep_cpu();        //スリープ開始(ここでプログラムは停止する)
     sleep_disable();    //スリープを無効化
